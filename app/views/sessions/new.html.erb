@@ -1,0 +1,17 @@
+<h4>Log in as Admin</h4>
+
+<form action="<%= session_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="username">Username</label>
+  <input type="text" id="username" name="admin[username]" value="<%= @admin.username %>">
+
+  <br />
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="admin[password">
+
+  <br />
+
+  <input type="submit" value="Log in!">
+</form>

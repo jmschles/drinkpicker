@@ -2,7 +2,7 @@
 
 <h4><%= @drink.name %></h4>
 <ul>
-  <% @drink.ingredients.each do |i| %>
-    <li><%= i.name %></li>
+  <% @drink.components.each do |c| %>
+    <li><strong><%= c.quantity %></strong> <%= c.ingredient.name %></li>
   <% end %>
 </ul>

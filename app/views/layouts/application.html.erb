@@ -11,5 +11,12 @@
 
 <%= yield %>
 
+  <div id="footer">
+    <% if current_admin %>
+      <em>Welcome, <%= current_admin.username %>!</em> | <%= link_to "Make a Drink", root_url %> | <%= link_to "Logout", session_url, :method => "delete" %>
+    <% else %>
+      <em>Admin user? <%= link_to "Log in", new_session_url %>
+    <% end %>
+  </div>
 </body>
 </html>
