@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: components
+#
+#  id            :integer          not null, primary key
+#  drink_id      :integer          not null
+#  ingredient_id :integer          not null
+#  quantity      :string(255)
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  drink_id: 1
+  ingredient_id: 1
+  quantity: MyString
+
+two:
+  drink_id: 1
+  ingredient_id: 1
+  quantity: MyString

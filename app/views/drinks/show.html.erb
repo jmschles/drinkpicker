@@ -1,0 +1,8 @@
+<h3><%= random_suggest %></h3>
+
+<h4><%= @drink.name %></h4>
+<ul>
+  <% @drink.ingredients.each do |i| %>
+    <li><%= i.name %></li>
+  <% end %>
+</ul>
