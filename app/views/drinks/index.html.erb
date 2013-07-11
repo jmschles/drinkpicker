@@ -1,7 +1,12 @@
 <h3>All Drinks</h3>
 
-<ul>
+<ul class="drinks-list">
   <% @drinks.each do |drink| %>
-    <li><%= drink.name %></li>
+    <li data-id="<%= drink.id %>">
+      <%= drink.name %>
+      <span class="delete-links">
+         | <a class="drink-deleter" href="#">Delete</a>
+      </span>
+    </li>
   <% end %>
 </ul>

@@ -15,6 +15,12 @@ class DrinksController < ApplicationController
     end
   end
 
+  def destroy
+    @drink = Drink.find(params[:id])
+    @drink.destroy
+    render :json => @drink
+  end
+
   def new
     @ingredients = Ingredient.all
     @drink = Drink.new

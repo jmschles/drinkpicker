@@ -58,5 +58,7 @@ module DrinkPicker
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.filepicker_rails.api_key = ENV["DP_DEV_DB_FILEPICKER_KEY"]
   end
 end

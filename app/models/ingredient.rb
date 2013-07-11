@@ -14,6 +14,6 @@ class Ingredient < ActiveRecord::Base
   validates :name, :presence => true,
                    :uniqueness => true
 
-  has_many :drink_inclusions, :class_name => "Component"
+  has_many :drink_inclusions, :class_name => "Component", :dependent => :destroy
   has_many :drinks, :through => :drink_inclusions
 end

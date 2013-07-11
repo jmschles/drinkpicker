@@ -1,6 +1,6 @@
 <h4>Make a new drink!</h4>
 
-<form action="<%= drinks_url %>" method="POST">
+<%= form_for @drink do |f| %>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <label for="name">Name</label>
@@ -43,8 +43,13 @@
 
   <br />
 
-  <input type="submit" value="Create Drink">
-</form>
+  <%= f.label :filepicker_url, "Image: " %>
+  <%= f.filepicker_field :filepicker_url, :dragdrop => true %>
+
+  <br />
+
+  <%= f.submit %>
+<% end %>
 
 <script type="application/json" id="all_ingredients">
   <%= @ingredients.to_json.html_safe %>

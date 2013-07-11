@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require underscore
 //= require_tree .
+
+$(function () {
+  $('.drink-deleter').click(function () {
+    event.preventDefault();
+    var drink = $(this).closest('li');
+    console.log(drink.attr('data-id'));
+
+    deleteDrink(drink);
+    drink.remove();
+  });
+});
