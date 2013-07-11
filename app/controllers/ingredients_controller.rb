@@ -2,14 +2,6 @@ class IngredientsController < ApplicationController
 
   before_filter :require_login
 
-  def index
-    @ingredients = Ingredient.all
-  end
-
-  def new
-    @ingredient = Ingredient.new
-  end
-
   def create
     @ingredient = Ingredient.new(params[:ingredient])
     if @ingredient.save!
@@ -17,6 +9,20 @@ class IngredientsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @ingredient = Ingredient.find(params[:id])
+    @ingredient.destroy
+    render :json => @ingredient
+  end
+
+  def index
+    @ingredients = Ingredient.all
+  end
+
+  def new
+    @ingredient = Ingredient.new
   end
 
 end

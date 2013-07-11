@@ -19,9 +19,16 @@ $(function () {
   $('.drink-deleter').click(function () {
     event.preventDefault();
     var drink = $(this).closest('li');
-    console.log(drink.attr('data-id'));
 
     deleteDrink(drink);
     drink.remove();
   });
+
+  $('.ingredient-deleter').click(function () {
+    event.preventDefault();
+    var ingredient = $(this).closest('li');
+
+    deleteIngredient(ingredient);
+    ingredient.remove();
+  })
 });

@@ -2,6 +2,11 @@
 
 <ul>
   <% @ingredients.each do |i| %>
-    <li><%= i.name %></li>
+    <li data-id="<%= i.id %>">
+      <%= i.name %>
+      <span class='delete-links'>
+         | <a class="ingredient-deleter" href="#">Delete</a>
+      </span>
+    </li>
   <% end %>
 </ul>
