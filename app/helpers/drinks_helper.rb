@@ -13,4 +13,20 @@ module DrinksHelper
 
     suggestions.sample
   end
+
+  def refresh_text
+    refusals = [
+      "Fuck off",
+      "That sounds gross",
+      "Nasty",
+      "I'd rather puke",
+      "Thanks but no fucking way",
+      "Eeew!",
+      "Ugh...",
+      "Rat poison sounds more palatable",
+      "Gag me"
+    ]
+
+    refusals.sample
+  end
 end
