@@ -15,6 +15,11 @@ class DrinksController < ApplicationController
     end
   end
 
+  def new
+    @ingredients = Ingredient.all
+    @drink = Drink.new
+  end
+
   def show
     @drink = Drink.random
   end

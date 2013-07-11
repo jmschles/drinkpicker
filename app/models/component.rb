@@ -13,7 +13,7 @@
 class Component < ActiveRecord::Base
   attr_accessible :drink_id, :ingredient_id, :quantity
 
-  validates :drink, :ingredient, :quantity, :presence => true
+  validates :ingredient, :quantity, :presence => true
 
   belongs_to :drink
   belongs_to :ingredient

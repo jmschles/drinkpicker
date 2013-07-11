@@ -28,6 +28,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'underscore-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # To use ActiveModel has_secure_password

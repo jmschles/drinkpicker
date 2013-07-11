@@ -11,13 +11,15 @@
 #
 
 class Drink < ActiveRecord::Base
-  attr_accessible :name, :instructions, :link
+  attr_accessible :name, :instructions, :link, :components_attributes
 
   validates :name, :presence => true,
                    :uniqueness => true
 
   has_many :components
   has_many :ingredients, :through => :components
+
+  accepts_nested_attributes_for :components, :reject_if => :all_blank
 
   def self.random
     Drink.find(:first, :offset => rand(Drink.count))

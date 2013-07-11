@@ -16,10 +16,10 @@
       <p><em>Welcome, <%= current_admin.username %>!</em></p>
       <ul>
         <li><%= link_to "Home", root_url %></li>
-        <li><%= link_to "Browse Drinks", root_url %></li>
+        <li><%= link_to "Browse Drinks", drinks_url %></li>
         <li><%= link_to "Browse Ingredients", ingredients_url %></li>
         <li><%= link_to "Add an Ingredient", new_ingredient_url %></li>
-        <li><%= link_to "Make a Drink", root_url %></li>
+        <li><%= link_to "Make a Drink", new_drink_url %></li>
         <li><%= link_to "Logout", session_url, :method => "delete" %></li>
       </ul>
     <% else %>

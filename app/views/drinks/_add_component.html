@@ -1,0 +1,23 @@
+<script type="text/template" id="add_component_field">
+  <% unique_num = (new Date).getTime() %>
+  <% input_id = "todo_list_item_" + unique_num %>
+  <% ingredient = "drink[components_attributes][" + unique_num + "][ingredient_id]" %>
+  <% quantity = "drink[components_attributes][" + unique_num + "][quantity]" %>
+
+  <br />
+
+  <label>Ingredient: </label>
+  <select name="<%= ingredient %>">
+    <option></option>
+    <% _(ingredients).each(function (i) { %>
+      <% console.log(i); %>
+      <option value="<%= i.id %>"><%= i.name %></option>
+    <% }) %>
+  </select>
+
+  <br />
+
+  <label>Quantity: </label>
+  <input type="text" name="<%= quantity %>">
+
+</script>
