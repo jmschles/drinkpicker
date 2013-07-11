@@ -1,5 +1,11 @@
 module SessionsHelper
 
+  def require_login
+    unless current_admin
+      redirect_to root_url
+    end
+  end
+
   def current_admin
     return nil unless session[:session_token]
     @current_admin ||= Admin.find_by_session_token(session[:session_token])

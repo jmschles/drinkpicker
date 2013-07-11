@@ -1,5 +1,7 @@
 class DrinksController < ApplicationController
 
+  before_filter :require_login, :except => :show
+
   def index
     @drinks = Drink.all
   end

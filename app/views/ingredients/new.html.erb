@@ -1,0 +1,12 @@
+<h4>Add a new drink ingredient to the database</h4>
+
+<form action="<%= ingredients_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="ingredient[name]" value="<%= @ingredient.name %>">
+
+  <br />
+
+  <input type="submit" value="Submit">
+</form>
