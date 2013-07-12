@@ -14,9 +14,8 @@
 <div class="wrapper">
   <%= yield %>
 </div>
-
-  <div class="footer">
-    <% if current_admin %>
+  <% if current_admin %>
+    <div class="footer">
       <p><em>Welcome, <%= current_admin.username %>!</em></p>
       <ul>
         <li><%= link_to "Home", root_url %></li>
@@ -26,9 +25,8 @@
         <li><%= link_to "Make a Drink", new_drink_url %></li>
         <li><%= link_to "Logout", session_url, :method => "delete" %></li>
       </ul>
-    <% else %>
-      <p><em>Admin user? <%= link_to "Log in", new_session_url %></p>
-    <% end %>
+    </div>
+  <% end %>
   </div>
 </body>
 </html>
