@@ -4,7 +4,7 @@ DrinkPicker::Application.routes.draw do
   resources :admins, :only => [:create]
   resources :components, :only => [:create]
   resources :drinks
-  resources :ingredients, :only => [:create, :destroy, :new, :index]
+  resources :ingredients, :except => [:show]
   resource :session, :only => [:create, :new, :destroy]
 
 end

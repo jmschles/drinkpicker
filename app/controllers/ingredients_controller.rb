@@ -5,10 +5,14 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.new(params[:ingredient])
     if @ingredient.save!
-      redirect_to root_url
+      redirect_to new_ingredient_url
     else
       render :new
     end
+  end
+
+  def edit
+    @ingredient = Ingredient.find(params[:id])
   end
 
   def destroy
@@ -23,6 +27,15 @@ class IngredientsController < ApplicationController
 
   def new
     @ingredient = Ingredient.new
+  end
+
+  def update
+    @ingredient = Ingredient.find(params[:id])
+    if @ingredient.update_attributes(params[:ingredient])
+      redirect_to ingredients_url
+    else
+      render :edit
+    end
   end
 
 end
