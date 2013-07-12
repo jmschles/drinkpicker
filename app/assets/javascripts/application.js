@@ -16,6 +16,7 @@
 //= require_tree .
 
 $(function () {
+
   $('.drink-deleter').click(function () {
     event.preventDefault();
     var drink = $(this).closest('li');
@@ -31,4 +32,5 @@ $(function () {
     deleteIngredient(ingredient);
     ingredient.remove();
   })
+
 });

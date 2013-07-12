@@ -8,7 +8,11 @@ module DrinksHelper
       "Thirsty?  Fuckin' make a...",
       "Wet your fuckin' whistle with a...",
       "You aren't too good for a...",
-      "Fuck off, make a..."
+      "Fuck off, make a...",
+      "If I were you, I'd make a fucking...",
+      "Have a fucking...",
+      "You look like you could use a...",
+      "Life would be better with a..."
     ]
 
     suggestions.sample
@@ -24,7 +28,12 @@ module DrinksHelper
       "Eeew!",
       "Ugh...",
       "Rat poison sounds more palatable",
-      "Gag me"
+      "Gag me",
+      "No fucking thank you",
+      "Sounds awful",
+      "Barf",
+      "Not on your life",
+      "I don't fucking think so"
     ]
 
     refusals.sample

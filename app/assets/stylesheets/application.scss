@@ -31,6 +31,7 @@
   border: 1px solid #A99970;
   border-radius: 5px;
   box-sizing: border-box;
+  box-shadow: 2px 2px 3px #321;
 }
 
 * {
@@ -108,7 +109,8 @@ body {
   width: 500px;
   height: 400px;
   background-image: url('https://s3-us-west-1.amazonaws.com/drinkpicker/wood_pattern.png');
-  border: 3px inset #A99970;
+  border: 2px solid #988860;
+  box-shadow: 3px 3px 8px #200;
   border-radius: 8px;
 
   @include absolute-center(500px, 500px);
@@ -144,6 +146,7 @@ body {
   img {
     border: 1px solid #A99970;
     border-radius: 5px;
+    box-shadow: 2px 2px 3px #321;
   }
 }
 
@@ -170,6 +173,7 @@ body {
     padding: 5px 20px;
     text-decoration: none;
     color: black;
+    box-shadow: 2px 2px 4px #300;
     &:hover {
       background-color: #DCCCA0;
     }
@@ -185,6 +189,7 @@ body {
   font-size: 1.5em;
   color: #FEEEC0;
   font-weight: bold;
+  text-shadow: 2px 2px 3px #300;
 }
 
 
