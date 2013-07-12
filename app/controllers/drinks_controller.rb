@@ -3,7 +3,7 @@ class DrinksController < ApplicationController
   before_filter :require_login, :except => :show
 
   def index
-    @drinks = Drink.all
+    @drinks = Drink.all.sort_by { |d| d.name }
   end
 
   def create
@@ -16,7 +16,7 @@ class DrinksController < ApplicationController
   end
 
   def edit
-    @ingredients = Ingredient.all
+    @ingredients = Ingredient.all.sort_by { |i| i.name }
     @drink = Drink.find(params[:id])
   end
 
@@ -27,7 +27,7 @@ class DrinksController < ApplicationController
   end
 
   def new
-    @ingredients = Ingredient.all
+    @ingredients = Ingredient.all.sort_by { |i| i.name }
     @drink = Drink.new
   end
 

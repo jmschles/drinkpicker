@@ -22,7 +22,7 @@ class IngredientsController < ApplicationController
   end
 
   def index
-    @ingredients = Ingredient.all
+    @ingredients = Ingredient.all.sort_by { |i| i.name }
   end
 
   def new
