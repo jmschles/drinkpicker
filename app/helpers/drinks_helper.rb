@@ -6,7 +6,7 @@ module DrinksHelper
       "How 'bout a fucking...",
       "For instant oblivion, knock back a...",
       "Thirsty?  Fuckin' make a...",
-      "Wet your fuckin whistle with a...",
+      "Wet your fuckin' whistle with a...",
       "You aren't too good for a...",
       "Fuck off, make a..."
     ]
