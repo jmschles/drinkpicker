@@ -3,6 +3,7 @@
 <head>
   <title>DrinkPicker</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
   <%= filepicker_js_include_tag %>
   <%= favicon_link_tag 'favicon.ico' %>
@@ -10,9 +11,11 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="wrapper">
+  <%= yield %>
+</div>
 
-  <div id="footer">
+  <div class="footer">
     <% if current_admin %>
       <p><em>Welcome, <%= current_admin.username %>!</em></p>
       <ul>
@@ -24,7 +27,7 @@
         <li><%= link_to "Logout", session_url, :method => "delete" %></li>
       </ul>
     <% else %>
-      <em>Admin user? <%= link_to "Log in", new_session_url %>
+      <p><em>Admin user? <%= link_to "Log in", new_session_url %></p>
     <% end %>
   </div>
 </body>

@@ -60,6 +60,9 @@ GEM
     filepicker-rails (0.1)
       multi_json (~> 1.6)
       railties (>= 3.1.0, < 5.0)
+    fontello-rails (0.1.0)
+      railties (~> 3.2.9)
+      sass-rails (>= 3.2.5)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -139,6 +142,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   filepicker-rails
+  fontello-rails
   jquery-rails
   pg
   pry-rails
