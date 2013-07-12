@@ -15,6 +15,11 @@ class DrinksController < ApplicationController
     end
   end
 
+  def edit
+    @ingredients = Ingredient.all
+    @drink = Drink.find(params[:id])
+  end
+
   def destroy
     @drink = Drink.find(params[:id])
     @drink.destroy
@@ -28,5 +33,15 @@ class DrinksController < ApplicationController
 
   def show
     @drink = Drink.random
+  end
+
+  def update
+    @drink = Drink.find(params[:id])
+    @drink.components.destroy_all
+    if @drink.update_attributes(params[:drink])
+      redirect_to drinks_url
+    else
+      render :edit
+    end
   end
 end

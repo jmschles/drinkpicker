@@ -107,9 +107,9 @@ body {
 .drink {
   width: 500px;
   height: 400px;
-  background-color: #DCCCA0;
+  background-image: url('https://s3-us-west-1.amazonaws.com/drinkpicker/wood_pattern.png');
   border: 3px inset #A99970;
-  border-radius: 5px;
+  border-radius: 8px;
 
   @include absolute-center(500px, 500px);
 }

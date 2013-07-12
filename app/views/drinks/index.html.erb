@@ -5,6 +5,7 @@
     <li data-id="<%= drink.id %>">
       <%= drink.name %>
       <span class="delete-links">
+         | <%= link_to "Edit", edit_drink_url(drink) %>
          | <a class="drink-deleter" href="#">Delete</a>
       </span>
     </li>
